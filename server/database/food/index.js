@@ -1,11 +1,12 @@
 import mongoose from 'mongoose';
 
 const FoodSchema = new mongoose.Schema({
-    name: { type: string, required: true },
-    descript: { type: string, required: true },
+
+    name: { type: String, required: true },
+    descript: { type: String, required: true },
     isVeg: { type: Boolean, required: true },
     isContainsEgg: { type: Boolean, required: true },
-    category: { type: string, required: true },
+    category: { type: String, required: true },
     photos: {
         type: mongoose.Types.ObjectId,
 
@@ -27,8 +28,8 @@ const FoodSchema = new mongoose.Schema({
     },
 
 }, {
-    timestamps: true
+    timestamps: true,
 })
 
 
-export const FoodModel = mongoose.model("food", FoodSchema)
+export const FoodModel = mongoose.model("foods", FoodSchema)
